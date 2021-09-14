@@ -38,10 +38,10 @@ jobs:
           python-version: 2.7
       - name: Install Tox
         run: pip install tox
-      - name: Install pytest cov
-        run: pip install pytest-cov
       - name: Run Tox
         run: tox -e cov
+      - name: Install pytest cov
+        run: pip install pytest-cov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1.5.0
         with:
